@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel da Empresa - Tripify</title>
+  <link rel="stylesheet" href="css/gerenciar.css" />
+    <script defer src="js/gerenciar.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Gerenciamento de Pacotes</h1>
+    <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Adicionar Novo Pacote</h2>
+      <form>
+        <input type="text" placeholder="Nome do Pacote" required />
+        <input type="text" placeholder="Destino" required />
+        <input type="number" placeholder="Preço (R$)" required />
+        <input type="number" placeholder="Vagas disponíveis" required />
+        <textarea placeholder="Descrição breve" rows="3"></textarea>
+        <button type="submit">Cadastrar Pacote</button>
+      </form>
+    </section>
+
+    <section class="tabela-section">
+      <h2>Pacotes Cadastrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Destino</th>
+            <th>Preço</th>
+            <th>Vagas</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pacote Aventura</td>
+            <td>Chapada Diamantina</td>
+            <td>R$ 1.800</td>
+            <td>12</td>
+            <td>
+              <button class="editar">Editar</button>
+              <button class="excluir">Excluir</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Pacote Romântico</td>
+            <td>Paris</td>
+            <td>R$ 6.200</td>
+            <td>8</td>
+            <td>
+              <button class="editar">Editar</button>
+              <button class="excluir">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tripify — Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

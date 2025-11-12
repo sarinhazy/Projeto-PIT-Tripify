@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tripify - Sua Próxima Aventura</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+
+    <!-- ======= NAVBAR ======= -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="avião" />
+      <h1>Tripify</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#destinos">Destinos</a></li>
+        <li><a href="#pacotes">Pacotes</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="reservar.html" class="btn-reservar">Reservar Agora</a>
+    <button id="loginBtn" class="btn-login">Entrar</button>
+  </header>
+        <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2>Entrar no Tripify</h2>
+      <p>Selecione o tipo de conta</p>
+      <button class="btn-cliente" id="clienteBtn">Entrar como Cliente</button>
+      <button class="btn-empresa" id="empresaBtn">Entrar como Empresa</button>
+      <small>Ao entrar, você concorda com nossos <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a>.</small>
+    </div>
+  </div>
+
+  </header>
+
+  <!-- ======= HERO SECTION ======= -->
+  <section id="hero" class="hero">
+    <div class="overlay">
+      <h1>Sua Próxima Aventura <br> <span>Começa Aqui</span></h1>
+      <p>Descubra destinos incríveis e crie memórias inesquecíveis com a Tripify</p>
+      <div class="search-box">
+        <input type="text" placeholder="Para onde você quer ir?" />
+        <button>🔍 Buscar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= DESTINOS ======= -->
+  <section id="destinos" class="section">
+    <h2>Destinos Populares</h2>
+    <p>Explore os lugares mais procurados pelos nossos viajantes</p>
+    <div class="cards">
+      <div class="card">
+        <img src="Maldivas.png" alt="Maldivas" />
+        <div class="card-info">
+          <h3>Maldivas</h3>
+          <p>Paraíso tropical com águas cristalinas</p>
+          <span class="price">R$ 8.500</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Paris" />
+        <div class="card-info">
+          <h3>Paris, França</h3>
+          <p>Cidade luz e capital do romance</p>
+          <span class="price">R$ 6.200</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="Tokyo japao.png" alt="Tokyo" />
+        <div class="card-info">
+          <h3>Tokyo, Japão</h3>
+          <p>Modernidade e tradição em harmonia</p>
+          <span class="price">R$ 7.800</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Santorini" />
+        <div class="card-info">
+          <h3>Santorini, Grécia</h3>
+          <p>Pôr do sol mais bonito do mundo</p>
+          <span class="price">R$ 5.900</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PACOTES ======= -->
+  <section id="pacotes" class="section light">
+    <h2>Nossos Pacotes</h2>
+    <p>Escolha o pacote ideal e viva sua melhor viagem</p>
+    <div class="cards">
+      <div class="card small">
+        <h3>Pacote Aventura</h3>
+        <p>Trilhas, cachoeiras e natureza exuberante.</p>
+        <button class="btn">Saiba Mais</button>
+      </div>
+      <div class="card small">
+        <h3>Pacote Romântico</h3>
+        <p>Experiências únicas a dois em destinos apaixonantes.</p>
+        <button class="btn">Saiba Mais</button>
+      </div>
+      <div class="card small">
+        <h3>Pacote Família</h3>
+        <p>Diversão garantida para todas as idades.</p>
+        <button class="btn">Saiba Mais</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= DEPOIMENTOS ======= -->
+  <section id="depoimentos" class="section">
+    <h2>Depoimentos</h2>
+    <p>O que nossos viajantes dizem</p>
+    <div class="cards depoimentos">
+      <div class="depo">
+        <p>“A melhor experiência da minha vida! Tudo perfeito.”</p>
+        <h4>— Ana Souza</h4>
+      </div>
+      <div class="depo">
+        <p>“Serviço incrível e destinos de tirar o fôlego!”</p>
+        <h4>— Lucas Andrade</h4>
+      </div>
+      <div class="depo">
+        <p>“Voltaria a viajar com a Tripify sem pensar duas vezes!”</p>
+        <h4>— Carla Mendes</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTATO ======= -->
+  <section id="contato" class="section light">
+    <h2>Entre em Contato</h2>
+    <form class="contato-form">
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea placeholder="Sua mensagem..." rows="5"></textarea>
+      <button type="submit" class="btn">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <!-- ======= RODAPÉ ======= -->
+  <footer>
+    <p>© 2025 Tripify — Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

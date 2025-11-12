@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reserve Sua Viagem</title>
+  <link rel="stylesheet" href="css/reserva.css" />
+  <script defer src="js/reserva.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="back" href="index.html"><span>←</span> Voltar para Home</a>
+      <h1>Reserve Sua Viagem</h1>
+      <p class="lead">Escolha seu destino e personalize sua experiência</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="top-row">
+          <h2>Escolha o Destino</h2>
+          <div class="filters">
+            <div class="filter-group">
+              <span class="filter-title">Preço</span>
+              <div class="filter-buttons" id="priceFilters">
+                <button data-val="all" class="fbtn active">Todos</button>
+                <button data-val="<=5000" class="fbtn">Até R$5.000</button>
+                <button data-val="<=10000" class="fbtn">Até R$10.000</button>
+                <button data-val=">10000" class="fbtn">Mais de R$10.000</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-title">Duração</span>
+              <div class="filter-buttons" id="durationFilters">
+                <button data-val="all" class="fbtn active">Todos</button>
+                <button data-val="short" class="fbtn">Curta (3–5d)</button>
+                <button data-val="medium" class="fbtn">Média (6–10d)</button>
+                <button data-val="long" class="fbtn">Longa (11+d)</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-title">Distância</span>
+              <div class="filter-buttons" id="distanceFilters">
+                <button data-val="all" class="fbtn active">Todos</button>
+                <button data-val="nacional" class="fbtn">Nacional</button>
+                <button data-val="internacional" class="fbtn">Internacional</button>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:8px;align-items:center;">
+              <button class="btn-sm" id="clearFilters">Limpar filtros</button>
+              <div id="showCount" class="muted-small">Mostrando <span id="countNumber">0</span> viagens</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="destGrid" class="dest-grid">
+          <!-- cards injetados por script -->
+        </div>
+      </div>
+
+      <!-- detalhes -->
+      <div class="card">
+        <h3>Detalhes da Viagem</h3>
+        <div class="details">
+          <div class="field">
+            <label>Data da Viagem</label>
+            <input type="date" id="dateInput" />
+          </div>
+
+          <div class="field">
+            <label>Horário de Partida</label>
+            <select id="timeSelect">
+              <option value="09:00">09:00 - Manhã</option>
+              <option value="12:00">12:00 - Meio-dia</option>
+              <option value="15:00">15:00 - Tarde</option>
+              <option value="18:00" selected>18:00 - Tarde</option>
+              <option value="21:00">21:00 - Noite</option>
+            </select>
+          </div>
+
+          <div style="width:100%;display:flex;gap:12px;">
+            <div class="field" style="flex:1">
+              <label>Número de Passageiros</label>
+              <div class="passenger-control">
+                <button class="btn-icon" id="decBtn">−</button>
+                <div class="passenger-display" id="passengerCount">1</div>
+                <button class="btn-icon" id="incBtn">+</button>
+              </div>
+              <div class="available muted-small" id="availableText">Vagas disponíveis: —</div>
+            </div>
+
+            <div class="field" style="min-width:160px">
+              <label>Opções</label>
+              <select id="optionSelect">
+                <option value="default">Incluso: Transporte + Guia</option>
+                <option value="plus">Pacote Plus (+R$ 200 por pessoa)</option>
+                <option value="vip">VIP (+R$ 600 por pessoa)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- divisão de custos -->
+      <div class="card">
+        <h3>Divisão de Custos (RF03)</h3>
+        <div id="divisionArea" class="breakdown">
+          <div id="divisionText">Selecione um destino para ver a divisão de custos por passageiro.</div>
+          <div style="margin-top:8px;display:flex;gap:8px;">
+            <button class="btn btn-outline" id="copyShares">Copiar divisão</button>
+            <button class="btn btn-outline" id="exportCSV">Exportar .csv</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="card">
+        <div class="summary-hero" id="summaryImage"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <h3 id="summaryTitle" style="margin:0;font-size:16px">Destino: —</h3>
+            <div class="muted-small" id="summarySubtitle">—</div>
+          </div>
+        </div>
+
+        <div style="height:10px"></div>
+
+        <div class="summary-list">
+          <div class="summary-row"><div>Destino:</div><div id="sumDestino">—</div></div>
+          <div class="summary-row"><div>Categoria:</div><div id="sumCategory">—</div></div>
+          <div class="summary-row"><div>Duração:</div><div id="sumDuration">—</div></div>
+          <div class="summary-row"><div>Data:</div><div id="sumData">—</div></div>
+          <div class="summary-row"><div>Horário:</div><div id="sumHora">—</div></div>
+          <div class="summary-row"><div>Passageiros:</div><div id="sumPax">—</div></div>
+          <div class="summary-row"><div>Preço por pessoa:</div><div id="sumPrice">—</div></div>
+          <div class="summary-row"><div>Subtotal:</div><div id="sumSub">—</div></div>
+
+          <div class="summary-row total"><div>Total:</div><div id="sumTotal">R$ 0,00</div></div>
+        </div>
+        <div style="height:12px"></div>
+
+        <button class="btn btn-primary" id="payBtn" disabled>Continuar para Pagamento →</button>
+        <div style="height:8px"></div>
+        <button class="btn btn-outline" id="addCalendar" disabled>Adicionar ao Calendário</button>
+        <div style="height:8px"></div>
+        <button class="btn btn-outline" id="cancelBtn" disabled>Cancelar Reserva</button>
+      </div>
+    </aside>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fff9e5, #fff4cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #f9a825;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #fbc02d;
+  box-shadow: 0 0 5px rgba(251, 192, 45, 0.5);
+}
+
+.btn-cadastrar {
+  display: inline-block;
+  background: #fbc02d;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: 10px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.btn-cadastrar:hover {
+  background: #f9a825;
+}
+
+a {
+  color: #f9a825;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.voltar {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
