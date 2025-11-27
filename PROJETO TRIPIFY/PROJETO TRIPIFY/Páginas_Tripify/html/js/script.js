@@ -1,4 +1,4 @@
-// Suaviza a rolagem ao clicar nos links da navbar
+
 document.querySelectorAll('.navbar a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
     e.preventDefault();
